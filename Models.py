@@ -4,9 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# 初始化模型
 model = init_chat_model(model='deepseek-chat')
 # print(type(model))  # <class 'langchain_deepseek.chat_models.ChatDeepSeek'>
 
+# 访问模型
 # # 调用invoke方法(阻塞式调用，一次性返回)
 # response = model.invoke("月亮的首都是哪里？")
 # # 查看响应结果
@@ -20,6 +22,7 @@ model = init_chat_model(model='deepseek-chat')
 # for chunk in stream:
 #     print(chunk.content, end="", flush=True)
 
+# 在Agent中使用模型
 agent = create_agent(model=model)
 
 response = agent.invoke({"messages":[{"role":"user", "content":"广州今天的天气怎么样？"}]})
