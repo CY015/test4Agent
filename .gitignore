@@ -22,6 +22,8 @@ anaconda3/
 *.log
 *.db
 *.sqlite
+*.sqlite3
+db/
 
 # 系统文件
 .DS_Store
