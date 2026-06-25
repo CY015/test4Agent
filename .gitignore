@@ -39,4 +39,4 @@ build/
 
 # 测试用
 *.pdf
-./output
+./output/
